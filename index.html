@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>高级前端开发工程师面试题</title>
+    <link rel="stylesheet" style="text/css" href="css/bootstrap.min.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <style>
+    .container {
+        background: #c5c5c5;
+    }
+    
+    .mainQuestion {
+        margin: 20px;
+    }
+    
+    .question {
+        display: inline-block;
+        /*border-bottom: 1px solid black;*/
+        font-size: 20px;
+    }
+    
+    .answer {
+    	padding:10px; 
+        display: none;
+    }
+    
+    .btn-close {
+        display: none;
+    }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">web前端工程师面试题</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">高级 <span class="sr-only">(current)</span></a></li>
+                    <li><a href="#">中级</a></li>
+                    <li><a href="#">初级</a></li>
+                </ul>
+                <form class="navbar-form navbar-left">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit" class="btn btn-primary">搜索</button>
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">admin</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <div class="container">
+        <div class="mainQuestion">
+            <div class="question">对Web标准以及W3C的理解与认识？</div>
+            <button class="btn btn-primary btn-xs btn-open" type="submit">显示答案</button>
+            <button class="btn btn-primary btn-xs btn-close" type="submit">隐藏答案</button>
+            <p class="answer">
+                标签闭合、标签小写、不乱嵌套、提高搜索机器人搜索几率、使用外链CSS和JS脚本、结构行为表现的分离、文件下载与页面速度更快、内容能被更多的用户所访问、内容能被更广泛的设备所访问、更少的代码和组件、容易维护、改版方便，不需要变动页面内容、提供打印版本而水需要复制内容、提高网站易用性。</p>
+        </div>
+        <div class="mainQuestion">
+            <div class="question">简述一下你对HTML语义化的理解？</div>
+            <button class="btn btn-primary btn-xs btn-open" type="submit">显示答案</button>
+            <button class="btn btn-primary btn-xs btn-close" type="submit">隐藏答案</button>
+            <p class="answer">
+                用正确的标签做正确的事情。html语义化让页面的内容结构化，结构更清晰，便于对浏览器、搜索引擎解析;即使在没有样式CSS情况下也以一种文档格式显示，并且是容易阅读的;搜索引擎的爬虫也依赖于HTML标记来确定上下文和各个关键字的权重，利于SEO;使阅读源代码的人对网站更容易将网站分块，便于阅读维护理解。</p>
+        </div>
+        <div class="mainQuestion">
+            <div class="question">HTML5的离线储存怎么使用，工作原理能不能解释一下？</div>
+            <button class="btn btn-primary btn-xs btn-open" type="submit">显示答案</button>
+            <button class="btn btn-primary btn-xs btn-close" type="submit">隐藏答案</button>
+            <p class="answer">
+                在用户没有与因特网连接时，可以正常访问站点或应用，在用户与因特网连接时，更新用户机器上的缓存文件。</br>原理：HTML5的离线存储是基于一个新建的.appcache文件的缓存机制(不是存储技术)，通过这个文件上的解析清单离线存储资源，这些资源就会像cookie一样被存储了下来。之后当网络在处于离线状态下时，浏览器会通过被离线存储的数据进行页面展示。</p>
+        </div>
+        <div class="mainQuestion">
+            <div class="question">请描述一下 cookies，sessionStorage 和 localStorage 的区别？</div>
+            <button class="btn btn-primary btn-xs btn-open" type="submit">显示答案</button>
+            <button class="btn btn-primary btn-xs btn-close" type="submit">隐藏答案</button>
+            <p class="answer">
+                cookie是网站为了标示用户身份而储存在用户本地终端（Client Side）上的数据（通常经过加密）。cookie数据始终在同源的http请求中携带（即使不需要），记会在浏览器和服务器间来回传递。sessionStorage和localStorage不会自动把数据发给服务器，仅在本地保存。</br>存储大小：cookie数据大小不能超过4k。sessionStorage和localStorage 虽然也有存储大小的限制，但比cookie大得多，可以达到5M或更大。</br>有期时间：localStorage:存储持久数据，浏览器关闭后数据不丢失除非主动删除数据；sessionStorage：数据在当前浏览器窗口关闭后自动删除。cookie：设置的cookie过期时间之前一直有效，即使窗口或浏览器关闭</p>
+        </div>
+        <div class="mainQuestion">
+            <div class="question">如何实现浏览器内多个标签页之间的通信? </div>
+            <button class="btn btn-primary btn-xs btn-open" type="submit">显示答案</button>
+            <button class="btn btn-primary btn-xs btn-close" type="submit">隐藏答案</button>
+            <p class="answer">
+                WebSocket、SharedWorker； 也可以调用localstorge、cookies等本地存储方式； localstorge另一个浏览上下文里被添加、修改或删除时，它都会触发一个事件， 我们通过监听事件，控制它的值来进行页面信息通信； 注意quirks：Safari 在无痕模式下设置localstorge值时会抛出 QuotaExceededError 的异常；</p>
+        </div>
+        <div class="mainQuestion">
+            <div class="question">CSS优先级算法如何计算？</div>
+            <button class="btn btn-primary btn-xs btn-open" type="submit">显示答案</button>
+            <button class="btn btn-primary btn-xs btn-close" type="submit">隐藏答案</button>
+            <p class="answer">
+                * 优先级就近原则，同权重情况下样式定义最近者为准; * 载入样式以最后载入的定位为准; 优先级为: !important > id > class > tag important 比 内联优先级高
+            </p>
+        </div>
+        <div class="mainQuestion">
+            <div class="question">position的值relative和absolute定位原点是？</div>
+            <button class="btn btn-primary btn-xs btn-open" type="submit">显示答案</button>
+            <button class="btn btn-primary btn-xs btn-close" type="submit">隐藏答案</button>
+            <p class="answer">
+                absolute 生成绝对定位的元素，相对于值不为 static的第一个父元素进行定位。 fixed （老IE不支持） 生成绝对定位的元素，相对于浏览器窗口进行定位。 relative 生成相对定位的元素，相对于其正常位置进行定位。 static 默认值。没有定位，元素出现在正常的流中（忽略 top, bottom, left, right z-index 声明）。 inherit 规定从父元素继承 position 属性的值。
+            </p>
+        </div>
+        <div class="mainQuestion">
+            <div class="question">经常遇到的浏览器的兼容性有哪些？原因，解决方法是什么，常用hack的技巧 ？</div>
+            <button class="btn btn-primary btn-xs btn-open" type="submit">显示答案</button>
+            <button class="btn btn-primary btn-xs btn-close" type="submit">隐藏答案</button>
+            <p class="answer">
+                * png24位的图片在iE6浏览器上出现背景，解决方案是做成PNG8. </br>* 浏览器默认的margin和padding不同。解决方案是加一个全局的</br>*{margin:0;padding:0;}来统一。</br> * IE6双边距bug:块属性标签float后，又有横行的margin情况下，在ie6显示margin比设置的大。 浮动ie产生的双倍距离 #box{ float:left; width:10px; margin:0 0 0 100px;} 这种情况之下IE会产生20px的距离，解决方案是在float的标签样式控制中加入 ——_display:inline;将其转化为行内属性。(_这个符号只有ie6会识别) 渐进识别的方式，从总体中逐渐排除局部。 首先，巧妙的使用“\9”这一标记，将IE游览器从所有情况中分离出来。 接着，再次使用“+”将IE8和IE7、IE6分离开来，这样IE8已经独立识别。</br> * IE下,可以使用获取常规属性的方法来获取自定义属性, 也可以使用getAttribute()获取自定义属性; Firefox下,只能使用getAttribute()获取自定义属性。 解决方法:统一通过getAttribute()获取自定义属性。</br> * IE下,even对象有x,y属性,但是没有pageX,pageY属性; Firefox下,event对象有pageX,pageY属性,但是没有x,y属性。</br> * 解决方法：（条件注释）缺点是在IE浏览器下可能会增加额外的HTTP请求数。</br> * Chrome 中文界面下默认会将小于 12px 的文本强制按照 12px 显示, 可通过加入 CSS 属性 -webkit-text-size-adjust: none; 解决。
+            </p>
+        </div>
+        <div class="mainQuestion">
+            <div class="question">谈谈This对象的理解。</div>
+            <button class="btn btn-primary btn-xs btn-open" type="submit">显示答案</button>
+            <button class="btn btn-primary btn-xs btn-close" type="submit">隐藏答案</button>
+            <p class="answer">
+                this总是指向函数的直接调用者（而非间接调用者）； 如果有new关键字，this指向new出来的那个对象； 在事件中，this指向触发这个事件的对象，特殊的是，IE中的attachEvent中的this总是指向全局对象Window；
+            </p>
+        </div>
+        <div class="mainQuestion">
+            <div class="question">Javascript作用链域?</div>
+            <button class="btn btn-primary btn-xs btn-open" type="submit">显示答案</button>
+            <button class="btn btn-primary btn-xs btn-close" type="submit">隐藏答案</button>
+            <p class="answer">
+                全局函数无法查看局部函数的内部细节，但局部函数可以查看其上层的函数细节，直至全局细节。 当需要从局部函数查找某一属性或方法时，如果当前作用域没有找到，就会上溯到上层作用域查找， 直至全局函数，这种组织形式就是作用域链。
+            </p>
+        </div>
+        <div class="mainQuestion">
+            <div class="question">什么是闭包（closure），为什么要用它？</div>
+            <button class="btn btn-primary btn-xs btn-open" type="submit">显示答案</button>
+            <button class="btn btn-primary btn-xs btn-close" type="submit">隐藏答案</button>
+            <p class="answer">
+                闭包是指有权访问另一个函数作用域中变量的函数，创建闭包的最常见的方式就是在一个函数内创建另一个函数，通过另一个函数访问这个函数的局部变量,利用闭包可以突破作用链域，将函数内部的变量和方法传递到外部。 </br>闭包的特性： 1.函数内再嵌套函数 2.内部函数可以引用外层的参数和变量 3.参数和变量不会被垃圾回收机制回收
+            </p>
+        </div>
+        <div class="mainQuestion">
+            <div class="question">new操作符具体干了什么呢?</div>
+            <button class="btn btn-primary btn-xs btn-open" type="submit">显示答案</button>
+            <button class="btn btn-primary btn-xs btn-close" type="submit">隐藏答案</button>
+            <p class="answer">
+                1、创建一个空对象，并且 this 变量引用该对象，同时还继承了该函数的原型。 2、属性和方法被加入到 this 引用的对象中。 3、新创建的对象由 this 所引用，并且最后隐式的返回 this 。
+            </p>
+        </div>
+        <div class="mainQuestion">
+            <div class="question">Ajax 是什么? 如何创建一个Ajax？</div>
+            <button class="btn btn-primary btn-xs btn-open" type="submit">显示答案</button>
+            <button class="btn btn-primary btn-xs btn-close" type="submit">隐藏答案</button>
+            <p class="answer">
+                ajax的全称：Asynchronous Javascript And XML。 异步传输+js+xml。
+                </br>所谓异步，在这里简单地解释就是：向服务器发送请求的时候，我们不必等待结果，而是可以同时做其他的事情，等到有了结果它自己会根据设定进行后续操作，与此同时，页面是不会发生整页刷新的，提高了用户体验。
+                </br>(1)创建XMLHttpRequest对象,也就是创建一个异步调用对象 (2)创建一个新的HTTP请求,并指定该HTTP请求的方法、URL及验证信息 (3)设置响应HTTP请求状态变化的函数 (4)发送HTTP请求 (5)获取异步调用返回的数据 (6)使用JavaScript和DOM实现局部刷新
+            </p>
+        </div>
+        <div class="mainQuestion">
+            <div class="question">是否了解公钥加密和私钥加密。</div>
+            <button class="btn btn-primary btn-xs btn-open" type="submit">显示答案</button>
+            <button class="btn btn-primary btn-xs btn-close" type="submit">隐藏答案</button>
+            <p class="answer">
+                一般情况下是指私钥用于对数据进行签名，公钥用于对签名进行验证; HTTP网站在浏览器端用公钥加密敏感数据，然后在服务器端再用私钥解密。
+            </p>
+        </div>
+        <div class="mainQuestion">
+            <div class="question">对前端工程师这个职位是怎么样理解的？它的前景会怎么样？</div>
+            <button class="btn btn-primary btn-xs btn-open" type="submit">显示答案</button>
+            <button class="btn btn-primary btn-xs btn-close" type="submit">隐藏答案</button>
+            <p class="answer">
+                前端是最贴近用户的程序员，比后端、数据库、产品经理、运营、安全都近。</br>1、实现界面交互 2、提升用户体验 3、有了Node.js，前端可以实现服务端的一些事情
+            </p>
+        </div>
+        <div class="mainQuestion">
+            <div class="question">什么叫优雅降级和渐进增强？</div>
+            <button class="btn btn-primary btn-xs btn-open" type="submit">显示答案</button>
+            <button class="btn btn-primary btn-xs btn-close" type="submit">隐藏答案</button>
+            <p class="answer">
+                优雅降级：Web站点在所有新式浏览器中都能正常工作，如果用户使用的是老式浏览器，则代码会针对旧版本的IE进行降级处理了,使之在旧式浏览器上以某种形式降级体验却不至于完全不能用。 如：border-shadow
+                </br>渐进增强：从被所有浏览器支持的基本功能开始，逐步地添加那些只有新版本浏览器才支持的功能,向页面增加不影响基础浏览器的额外样式和功能的。当浏览器支持时，它们会自动地呈现出来并发挥作用。
+                </br>如：默认使用flash上传，但如果浏览器支持 HTML5 的文件上传功能，则使用HTML5实现更好的体验；
+            </p>
+        </div>
+        <div class="mainQuestion">
+            <div class="question">对Node的优点和缺点提出了自己的看法</div>
+            <button class="btn btn-primary btn-xs btn-open" type="submit">显示答案</button>
+            <button class="btn btn-primary btn-xs btn-close" type="submit">隐藏答案</button>
+            <p class="answer">
+                （优点）因为Node是基于事件驱动和无阻塞的，所以非常适合处理并发请求， 因此构建在Node上的代理服务器相比其他技术实现（如Ruby）的服务器表现要好得多。 此外，与Node代理服务器交互的客户端代码是由javascript语言编写的， 因此客户端和服务器端都用同一种语言编写，这是非常美妙的事情。
+                </br>（缺点）Node是一个相对新的开源项目，所以不太稳定，它总是一直在变， 而且缺少足够多的第三方库支持。看起来，就像是Ruby/Rails当年的样子。
+            </p>
+        </div>
+    </div>
+    <script>
+    $('.btn').click(function() {
+        $(this).parent().children(".btn-open").toggle();
+        $(this).parent().children(".btn-close").toggle();
+        $(this).parent().children(".answer").toggle();
+    });
+    </script>
+</body>
+
+</html>
